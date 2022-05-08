@@ -13,12 +13,22 @@ function convertNumberToArrayAndReverse(n) {
     // return arr
     /////////////////////////////////////////////////////////////////////////////////////////////
     // answer in one line
-    return n.toString().split("").map(x => +x).reverse()
+    // return n.toString().split("").map(x => +x).reverse()
 
     //////////////////////////////////////////////////////////////////////////////////////
     //third answer to use empty array
+    //convert number to string
+    let str = n.toString()
 
-    let str
+    //create Empty array
+    let emptyArray = [];
+
+    //loop to str
+    for (let i = 0; i < str.length; i++) {
+        emptyArray.unshift(+str[i])
+    }
+
+    return emptyArray
 }
 
 console.log(convertNumberToArrayAndReverse(456321))
