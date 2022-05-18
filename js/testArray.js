@@ -21,3 +21,12 @@ function generateYears(start, end, exclude) {
 //
 // console.log(sayHello('',12))
 
+function calc(...numbers){
+    let result = 1;
+    for (let i = 0; i < numbers.length; i++) {
+        result += numbers[i]
+    }
+    return result
+}
+
+console.log(calc(1,2,3,4,5,6,7,8,9,10))
