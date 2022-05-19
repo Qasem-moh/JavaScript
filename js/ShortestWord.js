@@ -55,10 +55,28 @@ console.log(findShort(stringWord))
 //     return min
 // }
 ///////////////////////////////////////////////
-function findShort(s){
-    return s
-        .split(' ')
-        .map(a => a.length)
-        .reduce((a, b) => Math.min(a, b))
+// function findShort(s){
+//     return s
+//         .split(' ')
+//         .map(a => a.length)
+//         .reduce((a, b) => Math.min(a, b))
+// }
+////////////////////////////////////////////////////
+// function findShort(s){
+//     return Math.min(...s.split(/\s/).map((w) => w.length));
+// }
+///////////////////////////////////
+
+function findShort(string) {
+    var array = string.split(' ');
+    var shortest = null;
+
+    for (var i=0, l=array.length; i<l; ++i)
+    {
+        if (shortest == null || array[i].length < shortest)
+            shortest = array[i].length;
+    }
+
+    return shortest;
 }
 
